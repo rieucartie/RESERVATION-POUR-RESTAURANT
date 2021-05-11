@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row2">
+    <div class="col-lg-8 mb-4">
+       <h1> <span> Creér un plat</span></h1>
+      {{ form_start(form) }}
+      {{ form_errors(form) }}
+      <div class="control-group form-group">
+          {{ form_label(form.nom) }}
+          {{ form_errors(form.nom) }}
+          {{ form_widget(form.nom) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.description) }}
+          {{ form_errors(form.description) }}
+          {{ form_widget(form.description) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.ingredient) }}
+          {{ form_errors(form.ingredient) }}
+          {{ form_widget(form.ingredient) }}
+      </div>
+      <div class="control-group form-group">
+        <img id="tapaThumb" class="img-fluid" width="150px" src="{{ asset('img/tapas/'~urlFoto) }}" alt="">
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.photo) }}
+          {{ form_errors(form.photo) }}
+          {{ form_widget(form.photo) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.date_de_creation) }}
+          {{ form_errors(form.date_de_creation) }}
+          {{ form_widget(form.date_de_creation) }}
+      </div>
+        <div class="control-group form-group">
+          {{ form_label(form.categorie) }}
+          {{ form_errors(form.categorie) }}
+          {{ form_widget(form.categorie) }}
+      </div>
+       <br>
+      <div class="control-group form-group">
+          {{ form_label(form.creer) }}
+          {{ form_widget(form.creer) }}
+      </div>
+      {{ form_end(form) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+ {% block javascripts %}
+  
+     <script type="text/javascript">
+          function changeCatSelect() {
+          $.getJSON("http://localhost:8000/api/listeCategories",function(data){
+          var ultimeCategorie=data[data.length-1];
+   $(tapasbundle_tapa_categoria).append(new Option(ultimeCategorie["nom"],ultimeCategorie["id"]));
+    });
+}
+ function newCatAdd(){
+     console.log($(newCat).val());
+     var newCat=$.post("http://localhost:8000/api/insertCategorie/"+$(newCat).val(),function(){
+         $(newCat).val("") ;
+         changeCatSelect();
+         alert('nouvelle categorie insertion reussi');
+          })
+       .fail(function(){
+            alert('nouvelle categorie insertion erreur');
+ });
+ }
+     </script>
+{% endblock %}

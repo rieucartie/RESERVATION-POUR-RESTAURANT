@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+</header>
+<div class="container">
+ <div class="ing">   
+ <h2 class="my-4">Toutes nos categories</h2>
+ </div>
+  <div class="row mt-4">
+
+    {% for categorie in categories %}
+
+    <div class="col-lg-4 col-sm-6 portfolio-item">
+      <div class="card h-100">
+        <div class="card-body">
+          <h4 class="card-title">
+            <a href="{{path('home_categories',{'id': categorie.id})}}">{{categorie.nom}}</a>
+          </h4>
+          <p class="card-text">{{categorie.description}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <br><br>
+  {% if maxPages > 1 %}
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      {%if thisPage > 1 %}
+      <li class="page-item"><a class="page-link" href="{{ path('home_categories', {currentPage: thisPage-1 < 1 ? 1 : thisPage-1}) }}">Précedent</a></li>
+      {% endif %}
+      {% for i in 1..maxPages %}
+      <li class="page-item"><a class="page-link" href="{{ path('home_categories', {currentPage: i}) }}">{{ i }}</a></li>
+      {% endfor %}
+      {%if thisPage < maxPages %}
+      <li class="page-item"><a class="page-link" href="{{ path('home_categories', {currentPage: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">Suivant</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+</div> 
+{% endblock %}

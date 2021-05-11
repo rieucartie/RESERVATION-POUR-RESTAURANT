@@ -1,0 +1,1319 @@
+// customize some Bootstrap variables
+$primary: darken(#428bca, 20%);
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+body {
+	display : table;
+	width: 100%; 
+}
+footer { 
+	display : table-row;
+	height: 100px; /* à titre d'exemple */
+}
+.container {
+
+    width: 80%;
+
+    margin: 0 auto;
+ 
+    padding: 20px;
+
+}
+.row{
+    margin-top: 95px;
+}
+.row2{
+    margin-top: 135px;
+}
+.img-fluid1 {
+    max-width: 100%;
+    height: 200px;
+}
+
+.changeColorRed{
+  background:#F5871F  
+}
+.changeColorBlue{
+  background:#01ff70  
+}
+.ing{
+    margin-top:85px;
+    margin-bottom: 20px;
+}
+.ing2{
+    margin-top:5px;
+}
+
+
+.droite{
+    float: left;
+    margin-top: 10px;
+    padding-right: 25px;
+    padding-left: 10px;
+    
+    width: 45%;
+}
+ 
+.gauche{
+   float: left;
+    margin-top: 10px;
+    padding-right: 25px;
+    padding-left: 10px;
+
+    width: 45%;
+}
+
+
+
+/*nouveau pizzeria*/
+.headertaille{
+    width: 1024px;
+    height: 228px;
+    position:relative;
+    background-size: cover;
+    padding: -50px 0px 10px -50px; 
+}
+
+.partie1{
+    width: 1024px;
+    height: 41px;
+}
+.seconnecter
+{
+    float: right;
+    line-height: 2em;
+    color: white;
+    font-size: 23px;
+}
+.partie2{
+    width: 1024px;
+    height: 226px; 
+
+
+}
+/* interieur partie 2*/
+.inner-div
+{
+    width: 348px;
+    height: 186px;
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.inner-div1{
+    width: 250px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    top: 0%;
+    right: 700px;
+    bottom: 0;
+    left:0;
+    font :  3em "loki cola", sans-serif;
+    color: rgba(92, 144, 173, 255);
+    text-align: center
+}
+.nompizeeraiheader{
+    width: 350px;
+    height: 50px;
+    position: absolute;
+    margin: auto;
+    right: 20px;
+    bottom: 0;
+    left: 550px;
+    font: 2em "myriadPro regular", sans-serif;
+    color: green;
+    text-align: center;
+}
+.recherche{
+    position: absolute;
+    /* margin: auto; */
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 750px
+}
+/* fin partie 2*/
+.partie3{
+
+}
+.menu{
+
+    width: 1024px;
+    height: 52px;
+    background-color: rgba(38, 104, 150, 255);
+}
+/* fin  header*/
+
+
+/*    debut four       */ 
+.corpscentral{
+    margin-top: 76px;
+    background-color: #FFFFFF;
+    height: 1535px;
+    width: 1024px;
+    font: 0.8em "Archivo Black", sans-serif;
+    font-size:25px;
+    color: #FFFFFF;
+    text-align: center;
+} 
+
+.sousheader{ 
+    height: 250px;
+    width: 1024px;
+
+} 
+.sousheaderinterier{
+    width: 340px;
+    height: 147px;
+    padding: 100px 0px 0px 650px;
+} 
+/*     fin image four      */ 
+
+/*     debut centre page      */ 
+
+.premiersousheaderinterier
+{
+    background-color:  blueviolet;
+    height: 10px;
+    width: 121px;
+    margin-left: 25px;
+    font :  0.8em "Archivo Black", sans-serif;
+    font-size: 20px;
+    color: #679C16;
+    text-align: center;
+    line-height: 0.3em;
+} 
+
+
+.interieurgauche{
+    width: 80%;
+    float: left;height: 850px;
+
+
+} 
+.interieurdroite{
+    width: 19%;
+    float: right;height: 390px;
+
+} 
+.bandeau1{
+    height: 20px;
+ margin-top: -35px;
+    text-align: left;
+    text-indent: 30px;
+} 
+
+
+.rectangle1{
+    float: left;
+    width: 100%;
+    height: 90px;  
+    padding: 10px 50px 10px 10px;
+    background-color:  blue;
+} 
+
+
+.rectangle2{
+
+   width: 100%;
+    height: 300px;
+    margin-top: -60px;
+    margin-bottom: 70px;
+} 
+
+h1{
+    color: limegreen;
+    font-family: 'Lobster', cursive;
+    font: 0.8em "Lobster",cursive;
+    font-size:23px;
+    text-transform: uppercase;
+    text-decoration : underline;
+}
+
+.rectangle2div1
+{ float:left;
+  width: 30%;
+  height: 300px;
+  margin-left:2%   ;
+} 
+
+.ligne1re1c2{
+    margin-left: 20px;
+    float: left;
+    width:auto;
+    height:auto;
+}
+.ligne1re1c3{
+    margin-right: 150px;
+       color: rgba(38, 104, 150, 255);
+    font: 0.8em "aharoni",cursive;
+    text-indent: 25px;
+
+
+}
+.ligne1re1c4{
+      margin-top: 5px;
+    margin-right: 150px;
+    color: #020202;
+    font: 0.6em "indie flower",cursive;
+    height: auto;
+    width: 240px;
+}
+
+.ligne1re1c5{
+
+    margin-right: 150px;
+    color: #020202;
+    font-family: 'Lobster', cursive;
+    font-size: 12px;
+    height: 50px;
+    width: 240px;
+
+}
+.ligne1re1c5a{
+    float: left;
+    width: 55%;  height: 50px;
+
+}
+
+.ligne1re1c5b{
+    float: right;
+    width: 40%;
+    height: 50px;
+    line-height: 3em;text-align: left;
+}
+
+.rectangle2div2
+{  
+    margin-top: 110px;
+    margin-left:35%   ;
+    width: 30%;
+    height: 300px;
+} 
+
+
+
+.ligne1re2c2{
+    margin-left: 20px;
+    float: left;
+    width:auto;
+    height:auto;
+}
+.ligne1re2c3{
+           margin-top: 50px;
+    margin-right: 150px;
+       color: rgba(38, 104, 150, 255);
+    font: 0.8em "aharoni",cursive;
+    text-indent: 25px;
+
+
+}
+.ligne1re2c4{
+      margin-top: 5px;
+    margin-right: 150px;
+    color: #020202;
+    font: 0.6em "indie flower",cursive;
+    width: 240px;
+}
+
+.ligne1re2c5{
+
+    margin-right: 150px;
+    color: #020202;
+    font-family: 'Lobster', cursive;
+    font-size: 12px;
+    height: 50px;
+    width: 240px;
+
+}
+.ligne1re2c5a{
+    float: left;
+    width: 55%;  height: 50px;
+
+}
+
+.ligne1re2c5b{
+    float: right;
+    width: 40%;
+    height: 50px;
+    line-height: 3em;text-align: left;
+}
+
+
+.rectangle2div3{
+    margin-top:-300px;
+    width:30%;
+    height: 250px;
+    margin-left:68%   ; 
+} 
+
+
+.ligne1re3c2{
+    margin-left: 20px;
+    float: left;
+    width:auto;
+    height:auto;
+    margin-top: -230px;
+}
+.ligne1re3c3{
+           margin-top: 50px;
+    margin-right: 150px;
+       color: rgba(38, 104, 150, 255);
+    font: 0.8em "aharoni",cursive;
+    text-indent: 25px;
+
+
+}
+.ligne1re3c4{
+      margin-top: 5px;
+    margin-right: 150px;
+    color: #020202;
+    font: 0.6em "indie flower",cursive;
+    height: auto;
+    width: 240px;
+}
+
+.ligne1re3c5{
+
+    float: right;
+    width: 40%;
+    text-align: left;
+    margin-top: -55px;
+
+}
+.ligne1re3c5a{
+    float: left;
+    width: 55%;  height: 50px;
+
+}
+
+.ligne1re3c5b{
+        float: right;
+    width: 40%;
+    margin-right: 30px;
+    margin-top: -55px;
+}
+.ombrecarre1{ 
+
+    width:190px;
+    height: 233px;
+
+
+}
+.sousombrecarre2{ 
+         color: rgba(38, 104, 150, 255);
+    font: 0.6em "elephant",cursive;
+    text-transform: uppercase;
+    line-height: 5.3em;
+    margin-left: 45px;
+}
+
+.sousombrecarre2a{ 
+    color: rgba(38, 104, 150, 255);
+    font-size: 8px;
+    color: rgba(38, 104, 150, 255);
+}
+.sousombrecarre3a{ 
+    color: rgba(38, 104, 150, 255);
+    font-size: 8px;
+    color: rgba(38, 104, 150, 255);
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.ombrecarre2{ 
+    width:190px;
+    height: 233px;
+
+
+}
+.sousombrecarre3{ 
+    color: rgba(0, 144, 54, 255);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 5em;
+    margin-left: 30px;
+}
+
+.sousombrecarre3a{ 
+    color: rgba(38, 104, 150, 255);
+    font-size: 8px;
+
+    margin-left: 30px;
+}
+
+
+
+
+.ombrecarre3{ 
+
+    width:190px;
+    height: 233px;
+
+
+}
+.sousombrecarre4{ 
+    color: rgba(0, 144, 54, 255);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 5em;
+    margin-left: 30px;
+}
+
+.sousombrecarre4a{ 
+    color: rgba(38, 104, 150, 255);
+    font-size: 8px;
+
+    margin-left: 30px;
+}
+
+
+.footer{
+    height: 210px;
+    width: 1024px;
+} 
+.footer1{
+    float:left;
+    width: 30%;
+    height: 190px;
+    margin-left:2%   ;
+} 
+
+.footer1a{
+    float:left;
+    width: 45%;
+    height: 190px;
+    margin-left:2%   ;
+    margin-top: 30px;
+} 
+.footer1b{
+
+    float:right;
+    width: 45%;
+    height: 190px;
+    margin-left:2%   ;
+    color: rgba(38, 104, 150, 255);
+
+    margin-top: 30px;
+    font-family: 'Lobster', cursive;
+    font-size: 12px;
+
+} 
+
+.footer2{
+
+    margin-left:35%   ;
+    width: 30%;
+    height: 190px;  
+    color: rgba(38, 104, 150, 255);
+
+} 
+
+.footer3{
+    margin-top: -194px;
+    width: 30%;
+    height: 190px;
+    margin-left: 68%;
+    color: rgba(38, 104, 150, 255);
+}
+
+.sousfooter2{
+    width: 280px;
+    height: 130px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ 
+.rectangleetage3
+{
+}
+.rectangleetage3gauche{
+    width: 390px;
+    height: 75px;
+    float: left;
+}
+
+.rectangleetage3droite{
+    width: 390px;
+    height: 75px;
+    float: right;
+}
+
+.rectangle3
+{
+    width: 820px;
+    height: 170px;
+    margin-top: 70px;
+   
+}
+.rectangleetage3gaucheA{
+    width: 250px;
+    height: 50px;
+    float: left;
+    margin-left: 120px;
+    font: 0.6em "indie flower",cursive;
+    color: #FBF7F7;
+}
+
+.rectangleetage3droiteB{
+    width: 410px;
+    float: right;
+   margin-right: -30px;
+    font: 0.6em "indie flower",cursive;
+    color: #FBF7F7;
+}
+.sousdroiteB{
+    margin-right: 250px;
+    color: #F9F7F7;
+     font-family: 'montserrat',sans-serif;
+    font-size: 11px;
+    height: auto;
+    width: 240px;
+   margin-left: 120px;
+}
+.sousdroiteA{
+    margin-right: 250px;
+    color: #F9F7F7;
+     font-family: 'montserrat',sans-serif;
+    font-size: 11px;
+    height: auto;
+    width: 240px;
+
+}
+
+.lelastrectangle{
+    margin-top: 50px;
+    width: 790px;
+    height: 341px;
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+
+.dernierrec1{
+    margin-top: 0px;
+    width: 250px;
+    height: 235px;
+    margin-left: 30px;
+
+}
+
+
+.dernierrec1A{
+     
+    width: 250px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+
+
+.dernierrec1B{
+    margin-top: 55px;
+    color: #020202;
+        font-family: 'montserrat',sans-serif;
+    font-size: 12px;
+      margin-top: 10px;
+}
+.dernierrec2A{
+   
+    margin-top: -235px;
+    width: 250px;
+    margin-left: 290px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+
+
+.dernierrec2B1{
+    margin-top: 20px;
+    margin-left: 370px;
+    color: #020202;
+        font-family: 'montserrat',sans-serif;
+        font-size: 12px;font-weight: 700;
+    width: 150px;
+    height: 55px; 
+}.dernierrec2B2{
+       margin-top: 30px;
+    margin-left: 370px;
+    color: #020202;
+        font-family: 'montserrat',sans-serif;
+          font-size: 12px;font-weight: 700;
+    width: 150px;
+    height: 55px; 
+  
+}
+.dernierrec2B3{
+   margin-top: 20px;
+    margin-left: 370px;
+    color: #020202;
+      font-family: 'montserrat',sans-serif;
+         font-size: 12px;font-weight: 700;
+    width: 150px;
+    height: 55px;
+  
+}
+.dernierrec3  
+{
+margin-top: -266px;
+    width: 250px;
+    margin-left: 510px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+.liste {
+ font-family: "chopin", sans-serif;
+ font-size: 12px;
+margin-left: 10px;
+ list-style-type: circle;
+ color: #020202;
+} 
+p{
+ text-align: justify;
+
+} 
+
+.paragraphe {
+    text-align: center;
+    font-family: "EB garamond";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+   color: #679C16;
+      width: 250px;
+     height: 55px; 
+   
+}
+
+.paragraphe2 {
+    margin-top: 10px;
+    text-align: center;
+    font-family: "EB garamond";
+    font-weight: 400;
+    font-size: 16px;
+   color: #679C16;
+      width: 250px;
+     height: 25px; 
+   
+}
+.dernierrec3A{
+    margin-top: 110px;
+    width: 100px;
+    height: 25px;
+    margin-left: 45px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+.dernierrec3B{
+    margin-top: -25px;
+    width: 100px;
+    height: 25px;
+    margin-left: 145px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+.dernierrec3C{
+      margin-top: 120px;
+    width: 100px;
+    height: 25px;
+    margin-left: 55px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+.dernierrec3D{
+margin-top: -25px;
+    width: 100px;
+    height: 25px;
+    margin-left: 155px;
+    color: rgba(38, 104, 150, 1);
+    font: 0.9em "indie flower",cursive;
+}
+
+/*footer*/
+.footer-distributed{
+	     background-color: rgba(221, 237, 248, 255);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 1024px;
+    font: bold 16px sans-serif;
+    text-align: left;
+    overflow: hidden;
+   height: 350px;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+float: left;
+margin-top: 10px;
+margin-left: 20px;
+width: 45%;
+      
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	    color: #679C16;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+        float: right;
+}
+
+.footer-distributed h3 span{
+	color: rgba(38, 104, 150, 1);
+          opacity: 0.6;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	    color: #679C16;
+   
+    font: 1.2em "Lobster",cursive;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	 color: #679C16;
+    font-family: 'Lobster', cursive;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #679C16;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-right {
+    float: right;
+   
+    width: 50%;
+}
+
+.footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	     
+               color: #679C16;
+   
+    font: 1.5em "Lobster",cursive;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    width: 400px;
+    padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	 color: rgba(255, 200, 95, 163);
+          opacity: 0.6;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	    background: #679C16;
+    background-image: -webkit-linear-gradient(top, #679C16, #679C16);
+    background-image: -moz-linear-gradient(top, #679C16, #679C16);
+    background-image: -ms-linear-gradient(top, #679C16, #679C16);
+    background-image: -o-linear-gradient(top, #679C16, #679C16);
+    background-image: linear-gradient(to bottom, #679C16, #679C16);
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: -5px;
+    padding: 5px 50px;
+    float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+.footer-distributed{
+	     background-color: rgba(221, 237, 248, 255);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 1024px;
+    font: bold 16px sans-serif;
+    text-align: left;
+    overflow: hidden;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+	float: left;
+        margin-top: 10px;
+        margin-left: 20px;
+      
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+	    color: #679C16;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0 0 10px;
+        float: right;
+}
+
+.footer-distributed h3 span{
+	color: rgba(38, 104, 150, 1);
+          opacity: 0.6;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+	    color: #679C16;
+   
+    font: 1.2em "Lobster",cursive;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+	 color: #679C16;
+    font-family: 'Lobster', cursive;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+
+.footer-distributed .footer-icons{
+	margin-top: 40px;
+}
+
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #679C16;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+/* Footer Right */
+
+.footer-right{
+	float: right;margin-top: 50px;
+}
+
+.footer-right p{
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	     
+               color: #679C16;
+   
+    font: 1.5em "Lobster",cursive;
+}
+
+/* The contact form */
+
+.footer-distributed form{
+	display: inline-block;
+}
+
+.footer-distributed form input,
+.footer-distributed form textarea{
+	display: block;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    width: 400px;
+    padding: 18px;
+}
+
+.footer-distributed ::-webkit-input-placeholder {
+	 color: rgba(255, 200, 95, 163);
+          opacity: 0.6;
+}
+
+.footer-distributed ::-moz-placeholder {
+	color:  #5c666b;
+	opacity: 1;
+}
+
+.footer-distributed :-ms-input-placeholder{
+	color:  #5c666b;
+}
+
+
+.footer-distributed form input{
+	height: 55px;
+	margin-bottom: 15px;
+}
+
+.footer-distributed form textarea{
+	height: 100px;
+	margin-bottom: 20px;
+}
+
+.footer-distributed form button{
+	    background: #679C16;
+    background-image: -webkit-linear-gradient(top, #679C16, #679C16);
+    background-image: -moz-linear-gradient(top, #679C16, #679C16);
+    background-image: -ms-linear-gradient(top, #679C16, #679C16);
+    background-image: -o-linear-gradient(top, #679C16, #679C16);
+    background-image: linear-gradient(to bottom, #679C16, #679C16);
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin-top: -5px;
+    padding: 5px 50px;
+    float: right;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 1000px) {
+
+	.footer-distributed {
+		font: bold 14px sans-serif;
+	}
+
+	.footer-distributed .footer-company-name{
+		font-size: 12px;
+	}
+
+	.footer-distributed form input,
+	.footer-distributed form textarea{
+		width: 250px;
+	}
+
+	.footer-distributed form button{
+		padding: 10px 35px;
+	}
+
+}
+
+@media (max-width: 800px) {
+
+	.footer-distributed{
+		padding: 30px;
+	}
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		float: none;
+		max-width: 300px;
+		margin: 0 auto;
+	}
+
+	.footer-distributed .footer-left{
+		margin-bottom: 40px;
+	}
+
+	.footer-distributed form{
+		margin-top: 30px;
+	}
+
+	.footer-distributed form{
+		display: block;
+	}
+
+	.footer-distributed form button{
+		float: none;
+	}
+}
+
+ .bg-dark {
+    background-color: #287bce !important;
+}
+h1{
+text-align:center;
+background:-webkit-linear-gradient(
+#fff 0%,
+#fff 45%,
+#7c8d07 46%,
+#7c8d07 54%,  
+#fff 54%,
+#fff 100%);
+background:    -moz-linear-gradient(
+#fff 0%,
+#fff 45%,
+#7c8d07 46%,
+#7c8d07 54%,  
+#fff 54%,
+#fff 100%);
+background:     -ms-linear-gradient(
+#fff 0%,
+#fff 45%,
+#7c8d07 46%,
+#7c8d07 54%,  
+#fff 54%,
+#fff 100%);
+background:      -o-linear-gradient(
+#fff 0%,
+#fff 45%,
+#7c8d07 46%,
+#7c8d07 54%,  
+#fff 54%,
+#fff 100%);
+}
+h1 span{
+background:#fff;padding:0 20px;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.jolili {
+	list-style-type: none;
+	margin-bottom: 10px;
+        
+	
+	
+	vertical-align: top;
+	background: #678;
+	-moz-border-radius: 60px;
+	border-radius: 60px;
+	font-weight: bold;
+	text-align: center;
+	color: white;	
+        
+}

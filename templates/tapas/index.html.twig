@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="container">
+ <div class="ing">   
+ <h2>Liste des tapas préférés des clients</h2> 
+ </div>
+  <div class="row mt-4">
+            {% for tapa in tapas %}
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="{{ asset('img/tapas/'~tapa.photo) }}" alt=""></a>
+                        <div class="card-body">
+                            <h4 class="card-title">
+                                <a href="{{path('home_tapa',{'id': tapa.id})}}">{{tapa.nom}}</a>
+                            </h4>
+                            <p class="card-text">{{tapa.description}}</p>
+                        </div>
+                    </div>
+                </div>  
+            {% endfor %}
+        </div> 
+    </div>  
+{% endblock %}

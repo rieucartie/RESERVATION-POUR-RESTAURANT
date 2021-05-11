@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+    <div class="row2">
+    <h1> <span> Reservation</span></h1>  
+  <table id="myTable"   class="table table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Client</th>
+        <th scope="col">Date de création</th>
+        <th scope="col">Nombre personne</th>
+        <th scope="col">Etat</th>
+        <th scope="col">Commentaires</th>
+        <th scope="col">Annuler </th>
+        <th scope="col">Confirmer</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for unereservation in reservation %}
+      <tr     id="ligne"  name="ligne"    >
+        <th scope="row"></th>
+        <td>{{unereservation.user.username}} {{unereservation.user.email}}</td>
+        <td>{{unereservation.datereservation|date('Y-m-d h:m')}}</td>
+        <td>{{unereservation.nombrepersonnes}}</td>
+        <td>{% set reserver = unereservation.accepte %}
+            {% if reserver == 0 %}
+                <font color="blue">à confirmer</font>
+            {% elseif reserver == 1 %}
+            <font color="blue"> a été confirmé </font> 
+            {% endif %}  
+        </td>
+        <td>{{unereservation.observation}}</td>
+        <td><a data-toggle="modal" data-target="#AnnulerModal" data-whatever="{{unereservation.id}}"><center><i class="fa fa-times" aria-hidden="true"></i></center></a></td>
+        <td><a data-toggle="modal" data-target="#accepterModal" data-whatever="{{unereservation.id}}"><center><i class="fa fa-check" aria-hidden="true"></i></center></a></td>
+      </tr>
+      {% endfor %}
+    </tbody> 
+  </table>
+    
+
+</div>
+<div class="modal fade" id="AnnulerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Supprimer la réservation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Voulez-vous vraiment supprimer la réservation ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <a id="annulerresarvation" href="" class="btn btn-primary" data-whatever="{{path('gestion_AnnulerReservation')}}">Confirmer</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="accepterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Accepter la réservation</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Êtes-vous sûr de vouloir accepter la réservation?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        <a id="AccepterReservation" href="" class="btn btn-primary" data-whatever="{{path('gestion_acceptReservation')}}">Confirmer</a>
+      </div>
+    </div>
+   </div> 
+  </div>   
+</div>
+        
+{% endblock %}
+{% block javascripts %}
+<script type="text/javascript" >
+  $('#AnnulerModal').on('show.bs.modal', function (event) {
+    var Navette = $(event.relatedTarget)
+    var numReservation = Navette.data('whatever')
+    var modal = $(this)
+    modal.find('.modal-body').text('Êtes-vous sûr de vouloir annuler la réservation ? ' + numReservation)
+    modal.find('#annulerresarvation')[0].href=(modal.find('#annulerresarvation')).data('whatever')+"/"+numReservation
+  })
+$('#accepterModal').on('show.bs.modal', function (event) {
+  var Navette = $(event.relatedTarget)
+  var numReservation = Navette.data('whatever')
+  var modal = $(this)
+  modal.find('.modal-body').text('Êtes-vous sûr de vouloir accepter la réservation ? ' + numReservation)
+  modal.find('#AccepterReservation')[0].href=(modal.find('#AccepterReservation')).data('whatever')+"/"+numReservation
+})
+</script>
+{% endblock %}

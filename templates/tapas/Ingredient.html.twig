@@ -1,0 +1,102 @@
+{% extends 'base.html.twig' %}
+  {% block stylesheets %}
+      <style>
+          li {
+              cursor: pointer
+          }
+          li[data-choisi="true"] {
+              color: #3adb76;
+          }
+      </style>
+  {% endblock %}
+{% block body %}
+    </header>
+    <div class="container">
+        <div class="ing">
+            <h2>Liste des ingrédients utilisés </h2>
+        </div>
+        <div class="row mt-4">
+            {% for ingredient in ingredients %}
+                <div class="col-lg-4 col-sm-6 portfolio-item">
+                    <div class="">
+                        <p class="jolili">
+                            {{ ingredient.nom }}
+                        </p>
+                        <br>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <br><br>
+        {% if maxPages > 1 %}
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    {% if thisPage > 1 %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{{ path('home_ingredient', {currentPage: thisPage-1 < 1 ? 1 : thisPage-1}) }}">Précedent</a>
+                        </li>
+                    {% endif %}
+                    {% for i in 1..maxPages %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{{ path('home_ingredient', {currentPage: i}) }}">{{ i }}</a>
+                        </li>
+                    {% endfor %}
+                    {% if thisPage < maxPages %}
+                        <li class="page-item"><a class="page-link"
+                                                 href="{{ path('home_ingredient', {currentPage: thisPage+1 <= maxPages ? thisPage+1 : thisPage}) }}">Suivant</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+        <h1><span> Préparation des ingrédients : cliquez sur leur nom </span></h1>
+        <div class="gauche">
+            <ul>
+                <li data-choisi="false" data-prix="2">OEUF</li>
+                <li data-choisi="false" data-prix="1">TOMATE</li>
+                <li data-choisi="false" data-prix="5">FROMAGE</li>
+                <li data-choisi="false" data-prix="1">CHEDAR</li>
+                <li data-choisi="false" data-prix="2">CREVETTES</li>
+                <li data-choisi="false" data-prix="4">ARTICHAUT</li>
+                <li data-choisi="false" data-prix="8">MOULES</li>
+                <li data-choisi="false" data-prix="2">PORC</li>
+                <li data-choisi="false" data-prix="4">ANCHOIS</li>
+                <li data-choisi="false" data-prix="5">POIVRON</li>
+            </ul>
+        </div>
+        <div class="droite">
+            <h4>nombre d'ingredients choisis : <span id="count"> 0 </span></h4>
+            <h4>prix total : <span id="total"> 0 </span> €</h4>
+        </div>
+    </div>
+{% endblock %}
+  {% block javascripts %}
+      <script>
+          const plats = document.querySelectorAll('li');
+          plats.forEach(plat => {
+              plat.addEventListener('click', choisirPlats);
+          });
+
+          function choisirPlats() {
+              this.dataset.choisi = this.dataset.choisi == "true" ? "false" : "true";
+              calculNombrebPlats();
+              calculCalorie();
+          }
+
+          function calculNombrebPlats() {
+              const NombrebPlats =
+                  document.querySelectorAll('li[data-choisi="true"]').length;
+              document.querySelector('#count').textContent = NombrebPlats;
+          }
+
+          function calculCalorie() {
+              const PlatsChoisis =
+                  Array.from(document.querySelectorAll('li[data-choisi="true"]'));
+              const totalprix = PlatsChoisis.reduce((total, plat) =>
+                  total + Number(plat.dataset.prix), 0);
+              document.querySelector('#total').textContent = totalprix;
+          }
+      </script>
+  {% endblock %}
+
+ 

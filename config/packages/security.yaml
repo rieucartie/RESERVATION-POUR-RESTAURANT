@@ -1,0 +1,46 @@
+security:
+    encoders:
+        App\Entity\User:
+            algorithm: auto
+
+    providers: 
+        in_memory: { memory: null } 
+        in_database: 
+            entity: 
+                class: App\Entity\User 
+                property: email 
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        main: 
+            anonymous: lazy 
+            provider: in_database 
+            form_login: 
+                login_path: security_login 
+                check_path: security_login
+                default_target_path: home_tapas
+                always_use_default_target_path: true
+            logout:
+                path:   security_logout
+                target: 'security_login'
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/profile, roles: ROLE_USER }
+        - { path: '^/admin/utilisateurs', roles: ROLE_ADMIN }
+        - { path: '^/gestion/reservation', roles: ROLE_RESERVER }
+        
+        
+        
+        
+         
+    role_hierarchy:
+        ROLE_RESERVER: ROLE_USER,ROLE_RESERVER
+        ROLE_ADMIN: ROLE_ADMIN
+        
+
+ 
+        

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mb-4">
+    <h1> <span> Reservation</span></h1>  
+      {{ form_start(form) }}
+      {{ form_errors(form) }}
+      <div class="control-group form-group">
+         {{ form_label(form.user, 'Nom') }} 
+          {{ form_errors(form.user) }}
+          {{ form_widget(form.user) }}
+      </div>
+       <div class="control-group form-group">
+          {{ form_label(form.datereservation, 'date de reservation') }}
+          {{ form_errors(form.datereservation) }}
+          {{ form_widget(form.datereservation) }}
+      </div>
+     <div class="control-group form-group">
+          {{ form_label(form.nombrepersonnes,'nombre de personnes') }}
+          {{ form_errors(form.nombrepersonnes) }}
+          {{ form_widget(form.nombrepersonnes) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.observation,'Commentaires') }}
+          {{ form_errors(form.observation) }}
+          {{ form_widget(form.observation) }} 
+      </div>
+        {{ form_label(form.Reserver) }}
+      {{ form_widget(form.Reserver) }} 
+      {{ form_end(form) }}
+    </div>
+  </div>
+</div>
+{% endblock %}

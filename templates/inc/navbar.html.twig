@@ -1,0 +1,61 @@
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{{ path("home") }}"> RESTAURANT ***</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+                {% endif %}
+                {% if is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path("gestion_new_tapa") }}">Plats à composer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path("gestion_reservations") }}">Gestion des reservations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path("gestion_newCategorie") }}">Création de Categorie</a>
+                    </li>
+                    <a class="nav-link" href="{{ path("gestion_newIngredients") }}">Création d'ingredient</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('admin_utilisateurs') }}" tabindex="-1" aria-disabled="true">utilisateurs</a>
+                    </li>
+                {% endif %}
+                {% if is_granted('ROLE_RESERVER')  and not is_granted('ROLE_ADMIN') %}
+                    <li class="nav-item">
+                        <a class="nav-link text-success" href="{{ path("gestion_reservation") }}">Nouvelle
+                            reservation</a>
+                    </li>
+                {% endif %}
+                {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('security_logout') }}" tabindex="-1" aria-disabled="true">déconnexion</a>
+                </li>
+                {% elseif not app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path("home_tapas") }}">Plats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path("home_categories") }}">Type de plats</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path("home_ingredient") }}">Ingredients</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('security_login') }}" class="nav-link">Connexion</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('security_registration') }}" class="nav-link">Inscription</a>
+                </li>
+            </ul>
+            {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

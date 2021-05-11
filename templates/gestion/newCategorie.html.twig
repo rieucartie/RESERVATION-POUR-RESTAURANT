@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<div class="container">
+  <div class="row2">
+    <div class="col-lg-8 mb-4">
+      <h3></h3>
+        <h1> <span> Nouvelle categorie</span></h1>  
+      {{ form_start(form) }}
+      {{ form_errors(form) }}
+      <div class="control-group form-group">
+          {{ form_label(form.nom) }}
+          {{ form_errors(form.nom) }}
+          {{ form_widget(form.nom) }}
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.description) }}
+          {{ form_errors(form.description) }}
+          {{ form_widget(form.description) }}
+      </div>
+    
+      <div class="control-group form-group">
+        <img id="tapaThumb" class="img-fluid" width="150px" src="{{ asset('img/tapas/'~urlFoto) }}" alt="">
+      </div>
+      <div class="control-group form-group">
+          {{ form_label(form.photo) }}
+          {{ form_errors(form.photo) }}
+          {{ form_widget(form.photo) }}
+      </div>
+    
+       <div class="control-group form-group">
+          {{ form_label(form.creer) }}
+          {{ form_widget(form.creer) }}
+      </div>
+      {{ form_end(form) }}
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+</script>
+{% endblock %}
