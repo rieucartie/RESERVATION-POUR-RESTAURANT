@@ -17,7 +17,7 @@
 
   * remplir la base de donnée
 
-  * TABLE USER :
+ TABLE CATEGORIE :
 
 INSERT INTO `categorie` (`id`, `nom`, `description`, `photo`) VALUES
 
@@ -28,6 +28,8 @@ INSERT INTO `categorie` (`id`, `nom`, `description`, `photo`) VALUES
 (18, 'Viandes', 'Les produits de la catégorie Viandes', '3.jpeg'),
 
 (19, 'Légumes séchés', 'Légumes séchés', '4.jpeg');
+
+TABLE INGREDIENT :
 
 INSERT INTO `ingredient` (`id`, `nom`) VALUES
 (8, 'OEUF'),
@@ -45,6 +47,8 @@ INSERT INTO `ingredient` (`id`, `nom`) VALUES
 (22, 'CHOCOLAT'),
 (23, 'FRUIT');
 
+TABLE TAPAS :
+
 INSERT INTO `tapas` (`id`, `categorie_id`, `nom`, `description`, `photo`, `date_de_creation`, `top`) VALUES
 
 (20, 17, 'PRODUITS DE LA MER', 'ENSEMBLE PRODUITS DE LA MER', '7.jpeg', '2020-09-01 00:00:00', 1),
@@ -56,7 +60,7 @@ INSERT INTO `tapas` (`id`, `categorie_id`, `nom`, `description`, `photo`, `date_
 (25, 16, 'CROQUETTAS', 'un regal avec patates', '4.png', '2020-09-01 00:00:00', 1);
 
 
-TABLE USER
+TABLE USER :
 
 - php bin/console security:encode-password 
 
