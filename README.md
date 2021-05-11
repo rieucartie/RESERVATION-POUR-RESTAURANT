@@ -6,7 +6,9 @@
  * Confirmation et annulation des reservations en JavaScript
 
   - composer update
+  
   - yarn install
+  
   - yarn encore dev --watch
 
   - php bin/console d:d:c
