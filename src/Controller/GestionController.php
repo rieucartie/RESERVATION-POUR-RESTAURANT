@@ -11,7 +11,6 @@ use App\Form\CategorieType;
 use App\Form\IngredientType;
 use App\Form\ReservationType;
 use App\Form\TapaType;
-use App\Form\UsuarioType;
 use App\Repository\GestionReservationRepository;
 use App\Repository\ReservationRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
