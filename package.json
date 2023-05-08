@@ -23,14 +23,5 @@
   "directories": {
     "test": "tests"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rieucartie/Restauration-Reservation.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/rieucartie/Restauration-Reservation/issues"
-  },
-  "homepage": "https://github.com/rieucartie/Restauration-Reservation#readme",
   "description": ""
 }
